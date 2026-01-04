@@ -10,3 +10,4 @@
 
 echo "Heloo"
 echoooo "hi"
+echo "how are you"
