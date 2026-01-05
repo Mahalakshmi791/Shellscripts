@@ -7,7 +7,6 @@ logs_dir=$2
 
 mkdir -p "$logs_dir"
 
-touch "$logs_dir"/logs
 
 if [ ! -d "$Source_dir" ]
 then
@@ -21,7 +20,7 @@ find "$Source_dir" -name "*.log" -mtime +7 > "$logs_dir"/logs
 
 if [ -s "$logs_dir"/logs ]
 then
-tar -cvzf "$logs_dir/logs_$(date + %F).tar.gz" "$logs_dir"/logs
+tar -cvzf "$logs_dir/logs_$(date +%F).tar.gz" -T "$logs_dir"/logs
 
 while read -r file
 do
