@@ -17,9 +17,9 @@ else
 
 find "$Source_dir" -name *.log -mtime +30 -delete
 
-find "$Source_dir" -name *.log -mtime +7 > $logs_dir/logs
+find "$Source_dir" -name *.log -mtime +7 > "$logs_dir"/logs
 
 
-tar -cvzf "$logs_dir"/logs_"$(date)".gz "$logs_dir"/logs
+tar -cvzf "$logs_dir"/logs
 
 fi
