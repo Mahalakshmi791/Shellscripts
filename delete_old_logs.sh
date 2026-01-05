@@ -4,7 +4,9 @@
 
 Source_dir=$1
 logs_dir=$2
-touch logs
+mkdir -p $logs_dir
+
+touch $logs_dir/logs
 
 if [! -d $Source_dir]
 then
