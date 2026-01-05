@@ -23,7 +23,7 @@ if [ -s "$logs_dir"/logs ]
 then
 tar -cvzf "$logs_dir/logs_$(date + %F).tar.gz" "$logs_dir"/logs
 
-while IFS=read -r file
+while IFS=read file
 do
 
 rm -rf "$file"
